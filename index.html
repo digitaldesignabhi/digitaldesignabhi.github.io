@@ -10,8 +10,8 @@
 	<meta name="author" content="Abhinav Kumar">
 	<meta name="description" content="Digital design portfolio.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="web design, digital design, wordpress, squarespace, webflow, wix, html, css, javascript, jquery, abhinav kumar, portfolio, houston, texas, united states">
-	<!--meta tags for search engines-->
+	<meta name="keywords" content="web design, digital design, wordpress, squarespace, webflow, wix, html, css, javascript, jquery, abhinav kumar, portfolio, houston, texas, united states, david lynch">
+	<!--meta tags for enhanced site visibility to search engines-->
 	
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="" />
@@ -25,6 +25,7 @@
 	<link rel="icon" type="image/x-icon" href="">
 	<!--favicon svg image-->
 	
+	<link rel="preload" as="video" href="01.webm">
 	<link rel="preload" as="video" href="01.mov">
 	<!--preload home page background video-->
 	
@@ -35,9 +36,11 @@
 </head>
 
 <style>
-	html {background-color: black !important;}
+	html {background-color: black !important; scroll-behavior: smooth !important;}
 	.hero {background-image: url('01.png') !important;}
 	.hero-body {background-color: rgba(0,0,0,0.5) !important;}
+	video {max-width: none !important;}
+	@media screen and (max-width: 768px) {.hero-video {display: inline !important;}}
 </style>
 
 <body>
@@ -45,14 +48,17 @@
 	<section class="hero is-fullheight video">
 	    <div class="hero-video">
 			<video preload="auto" poster="01.png" id="" playsinline autoplay muted loop>
+				<source src="01.webm" type="video/webm">
 				<source src="01.mov" type="video/mp4">
 			</video>
 		</div>
+		
 		<div class="hero-head"></div>
+		
 		<div class="hero-body">
-			<div class="container">
-				<h1 class="title">Ideas are like fish.</h1>
-				<h2 class="subtitle is-size-7-mobile">If you want to catch little fish, you can stay in the shallow water. But if you want to catch the big fish, you’ve got to go deeper. Down deep, the fish are more powerful and more pure. They’re huge and abstract. And they’re very beautiful.</h2>
+			<div class="container has-text-centered">
+				<h1 class="title">ideas are like fish</h1>
+				<h2 class="subtitle is-size-6-mobile">if you want to catch little fish, you can stay in the shallow water. but if you want to catch the big fish, you’ve got to go deeper... down deep, the fish are more powerful and more pure. they’re huge and abstract. and they’re very beautiful.</h2>
 				<!--<div class="buttons">
 					<a class="button button-style is-rounded" href="https://www.jotform.com/230828014081044" target="_blank">Submit story</a>
 					<a class="button button-style is-rounded" href="https://continental-club-houston.square.site/" target="_blank">Get tickets</a>
