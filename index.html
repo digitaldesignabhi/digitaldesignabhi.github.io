@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="en" prefix="og: https://ogp.me/ns#" class="has-navbar-fixed-bottom">
 <!--opengraph protocol declaration for previewing site on social media-->
 
 <head>
@@ -20,7 +20,7 @@
 	<meta property="og:description" content="Digital design portfolio." />
 	<!--opengraph protocol for previewing site on social media-->
 	
-	<title>Abhinav Kumar | Digital Design Portfolio</title>
+	<title>Abhinav Kumar Portfolio</title>
 	
 	<link rel="icon" type="image/x-icon" href="">
 	<!--favicon svg image-->
@@ -32,32 +32,69 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 </head>
 
 <style>
 	html {background-color: black !important; scroll-behavior: smooth !important;}
 	.hero {background-image: url('01.png') !important;}
-	.hero-body {background-color: rgba(0,0,0,0.5) !important;}
+	.hero-body {background-color: rgba(0,0,0,0) !important;}
 	video {max-width: none !important;}
 	@media screen and (max-width: 768px) {.hero-video {display: inline !important;}}
+	@media screen and (prefers-reduced-motion: reduce) {html {scroll-behavior: auto !important;}}
+	/*disable smooth scrolling when users have prefers-reduced-motion enabled*/
 </style>
 
 <body>
 	
-	<section class="hero is-fullheight video">
-	    <div class="hero-video">
+	<section class="hero is-fullheight video" id="one">
+	    
+		<div class="hero-video">
 			<video preload="auto" poster="01.png" id="" playsinline autoplay muted loop>
 				<source src="01.webm" type="video/webm">
 				<source src="01.mov" type="video/mp4">
 			</video>
 		</div>
 		
-		<div class="hero-head"></div>
+		<div class="hero-head">
+			
+			<nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
+				<!--<div class="navbar-brand">
+					<a class="navbar-item" href="https://bulma.io">
+						<img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+					</a>
+					<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</a>
+				</div>-->
+				
+				<div class="navbar-menu is-active">
+					<a class="navbar-item" href="#one">
+						<i class="fa-solid fa-person-swimming"></i>
+					</a>
+					<a class="navbar-item" href="#two">
+						<i class="fa-solid fa-fish-fins"></i>
+					</a>
+					<a class="navbar-item" href="#two">
+						<i class="fa-solid fa-fish-fins"></i>
+					</a>
+					<a class="navbar-item" href="#two">
+						<i class="fa-solid fa-fish-fins"></i>
+					</a>
+			    </div>
+				
+			</nav>
+			
+		</div>
 		
 		<div class="hero-body">
 			<div class="container has-text-centered">
-				<h1 class="title">ideas are like fish</h1>
+				<h1 class="title">Ideas are like fish</h1>
 				<h2 class="subtitle is-size-6-mobile">if you want to catch little fish, you can stay in the shallow water. but if you want to catch the big fish, you’ve got to go deeper... down deep, the fish are more powerful and more pure. they’re huge and abstract. and they’re very beautiful.</h2>
 				<!--<div class="buttons">
 					<a class="button button-style is-rounded" href="https://www.jotform.com/230828014081044" target="_blank">Submit story</a>
@@ -67,7 +104,7 @@
 		</div>
 		
 		<div class="hero-foot has-text-centered">
-			<div class="container">
+			<!--<div class="container">
 				<div class="columns is-mobile has-text-centered is-centered is-multiline is-vcentered">
 					<div class="column is-narrow">
 						<a class="icon is-size-4 foot-icon" href="https://instagram.com/grownupstorytime" target="_blank">
@@ -100,12 +137,47 @@
 						</a>
 					</div>
 				</div>
-			</div>
+			</div>-->
 		</div>
+	
 	</section>
 	
-	<script>
-	</script>
+	<section class="hero is-fullheight" id="two">
+		
+	</section>
+
 </body>
+
+<script>
+	$(document).ready(function(){
+		
+		// Add smooth scrolling to all links
+		$("a").on('click', function(event) {
+			
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+				
+				// Prevent default anchor click behavior
+				event.preventDefault();
+				
+				// Store hash
+				var hash = this.hash;
+				
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				
+				$('html, body').animate({scrollTop: $(hash).offset().top}, 500, function(){
+					
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				
+				});
+			
+			} // End if
+		
+		});
+	
+	});
+</script>
 
 </html>
