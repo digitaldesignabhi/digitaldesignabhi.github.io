@@ -1,40 +1,50 @@
 <!DOCTYPE html>
+
+<!--opengraph protocol for previewing site on social media-->
 <html lang="en" prefix="og: https://ogp.me/ns#" class="has-navbar-fixed-bottom">
-<!--opengraph protocol declaration for previewing site on social media-->
 
 <head>
 	
+	<!--html5 international character encoding support across browsers-->
 	<meta charset="UTF-8">
-	<!--html5 character encoding for international support across browsers-->
 	
+	<!--meta tags for enhanced site visibility to search engines-->
 	<meta name="author" content="Abhinav Kumar">
 	<meta name="description" content="Digital design portfolio.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords" content="web design, digital design, wordpress, squarespace, webflow, wix, html, css, javascript, jquery, abhinav kumar, portfolio, houston, texas, united states, david lynch">
-	<!--meta tags for enhanced site visibility to search engines-->
 	
+	<!--opengraph protocol for previewing site on social media-->
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="" />
 	<meta property="og:title" content="Abhinav Kumar Portfolio" />
 	<meta property="og:url" content="" />
 	<meta property="og:description" content="Digital design portfolio." />
-	<!--opengraph protocol for previewing site on social media-->
 	
 	<title>Abhinav Kumar Portfolio</title>
 	
-	<link rel="icon" type="image/x-icon" href="">
 	<!--favicon svg image-->
+	<link rel="icon" type="image/x-icon" href="">
 	
+	<!--preload home page background video-->
 	<link rel="preload" as="video" href="01.webm">
 	<link rel="preload" as="video" href="01.mov">
-	<!--preload home page background video-->
+	<link rel="preload" as="video" href="03.webm">
+	<link rel="preload" as="video" href="03.mov">
 	
+	<!--external css stylesheet-->
 	<link rel="stylesheet" href="style.css">
+	
+	<!--bulma framework-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css">
+	
+	<!--fontawesome-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	
+	<!--google fonts-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
@@ -44,11 +54,11 @@
 	html {background-color: black !important; scroll-behavior: smooth !important;}
 	.hero {background-image: url('') !important;}
 	.hero-body {background-color: rgba(0,0,0,0) !important;}
-	video {max-width: none !important;}
+	#swimvideo {max-width: none !important;}
 	@media screen and (max-width: 768px) {.hero-video {display: inline !important;}}
-	@media screen and (prefers-reduced-motion: reduce) {html {scroll-behavior: auto !important;}}
-	img {box-shadow: .5em .75em rgba(255, 255, 255, .10) !important;}
 	/*disable smooth scrolling when users have prefers-reduced-motion enabled*/
+	@media screen and (prefers-reduced-motion: reduce) {html {scroll-behavior: auto !important;}}
+	.portfolio {box-shadow: .5em .5em .25em rgba(0,0,0,.25) !important;}
 </style>
 
 <body>
@@ -57,7 +67,7 @@
 	<section class="hero is-fullheight video" id="one">
 	    
 		<div class="hero-video">
-			<video preload="auto" poster="01.png" id="" playsinline autoplay muted loop>
+			<video preload="auto" poster="01.png" id="swimvideo" playsinline autoplay muted loop>
 				<source src="01.webm" type="video/webm">
 				<source src="01.mov" type="video/mp4">
 			</video>
@@ -84,10 +94,10 @@
 					<a class="navbar-item" href="#two">
 						<i class="fa-solid fa-fish-fins"></i>
 					</a>
-					<a class="navbar-item" href="#two">
+					<a class="navbar-item" href="#three">
 						<i class="fa-solid fa-fish-fins"></i>
 					</a>
-					<a class="navbar-item" href="#two">
+					<a class="navbar-item" href="#four">
 						<i class="fa-solid fa-fish-fins"></i>
 					</a>
 			    </div>
@@ -96,10 +106,10 @@
 			
 		</div>
 		
-		<div class="hero-body">
+		<div class="hero-body has-text-centered">
 			<div class="container">
 				<h1 class="title">ideas are like fish</h1>
-				<h2 class="subtitle is-size-7-mobile">"if you want to catch little fish, you can stay in the shallow water. but if you want to catch the big fish, you’ve got to go deeper... down deep, the fish are more powerful and more pure. they’re huge and abstract. and they’re very beautiful." - David Lynch, filmmaker</h2>
+				<h2 class="subtitle is-size-7-mobile"><br>if you want to catch little fish, you can stay in the shallow water.<br><br>but if you want to catch the big fish, you’ve got to go deeper...<br><br>down deep, the fish are more powerful and more pure.<br><br>they’re huge and abstract. and they’re very beautiful.</h2>
 				<!--<div class="buttons">
 					<a class="button button-style is-rounded" href="https://www.jotform.com/230828014081044" target="_blank">Submit story</a>
 					<a class="button button-style is-rounded" href="https://continental-club-houston.square.site/" target="_blank">Get tickets</a>
@@ -153,11 +163,12 @@
 		
 	</section>
 	
-	<section class="section has-background-info">
+	<!--air alliance-->
+	<section class="section has-background-info is-medium">
 		<div class="tile is-ancestor">
 			<div class="tile is-parent is-7">
 				<article class="tile is-child">
-					<figure class="image">
+					<figure class="image portfolio">
 						<img src="02c.png" id="yoil">
 					</figure>
 				</article>
@@ -165,10 +176,10 @@
 			<div class="tile is-parent has-text-centered-mobile">
 				<div class="tile is-child">
 					<p class="title">
-						Air Alliance Houston
+						air alliance houston
 					</p>
 					<p class="subtitle is-size-7-mobile">
-						Wordpress administration, configuration, customization, design mockup, and security for influential Harris County community non-profit. Major homepage refresh and global site updates to align with org rebrand (new primary, secondary, and tertiary color palette and patterns). Increased screen real-estate "above the fold"; streamlined site header/navbar; animated primary navbar CTA; added secondary hero CTA; streamlined footer.
+						Wordpress administration, configuration, customization, design mockup, and security for influential Harris County community non-profit.<br><br>Major homepage refresh and global site updates to align with org rebrand (new primary, secondary, and tertiary color palette and patterns). Increased screen real-estate "above the fold"; streamlined site header/navbar; animated primary navbar CTA; added secondary hero CTA; streamlined footer.
 					</p>
 					<div class="columns is-mobile is-vcentered">
 						<div class="column is-narrow-tablet has-text-right">
@@ -191,14 +202,37 @@
 				</div>
 			</div>
 		</div>
+	</section>
+	
+	<!--divider-->
+	<section class="hero has-background-link-dark" id="three">
+		
+		<div class="hero-body"></div>
+		
+	</section>
+	
+	<!--getac-->
+	<section class="section has-background-link is-medium">
 		<div class="tile is-ancestor">
-			<div class="tile is-parent is-3"></div>
-			<div class="tile is-parent is-6">
+			<div class="tile is-parent is-7">
 				<article class="tile is-child">
 					<figure class="image">
-						<img src="05c.png" id="goil">
+						<video class="portfolio" preload="auto" poster="" id="" playsinline autoplay muted loop>
+							<source src="03.webm" type="video/webm">
+							<source src="03.mov" type="video/mp4">
+						</video>
 					</figure>
 				</article>
+			</div>
+			<div class="tile is-parent has-text-centered-mobile">
+				<div class="tile is-child">
+					<p class="title">
+						getac
+					</p>
+					<p class="subtitle is-size-7-mobile">
+						Wordpress deployment support for a Taiwanese multinational technology manufacturer. Collaborated heavily with enterprise, legal, and marketing departments to balance regulatory and policy requirements with user experience best practices. Custom, event-driven modal development for conditional direct marketing consent and privacy notice consent. contact form creation. Multi-lingual data conversion support for international versions of site.
+					</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -243,11 +277,9 @@
 	        $('#aahSwitch').click(function(){
 	            if($(this).is(":checked")){
 					$('#yoil').attr('src','02c.png');
-					$('#goil').attr('src','05c.png');
 	            }
 	            else if($(this).is(":not(:checked)")){
 	                $('#yoil').attr('src','02b.png');
-					$('#goil').attr('src','05b.png');
 	            }
 	        });
 	    });
