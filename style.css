@@ -42,12 +42,12 @@
 
 .title {
 	font-family: 'Homemade Apple' !important; 
-	color: rgba(255,255,255,1) !important;
+	color: rgba(255,255,255,.75) !important;
 }
 
 .subtitle {
-	font-family: '' !important; 
-	/*color:rgba(255,255,255,.75) !important;*/
+	font-family: 'Urbanist' !important; 
+	color:rgba(255,255,255,.75) !important;
 }
 
 /*.button-style {

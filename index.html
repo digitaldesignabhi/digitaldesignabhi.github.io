@@ -33,6 +33,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/css/bulma-extensions.min.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
@@ -45,11 +47,13 @@
 	video {max-width: none !important;}
 	@media screen and (max-width: 768px) {.hero-video {display: inline !important;}}
 	@media screen and (prefers-reduced-motion: reduce) {html {scroll-behavior: auto !important;}}
+	img {box-shadow: .5em .75em rgba(255, 255, 255, .10) !important;}
 	/*disable smooth scrolling when users have prefers-reduced-motion enabled*/
 </style>
 
 <body>
 	
+	<!--above the fold video-->
 	<section class="hero is-fullheight video" id="one">
 	    
 		<div class="hero-video">
@@ -93,9 +97,9 @@
 		</div>
 		
 		<div class="hero-body">
-			<div class="container has-text-centered">
-				<h1 class="title">Ideas are like fish</h1>
-				<h2 class="subtitle is-size-6-mobile">if you want to catch little fish, you can stay in the shallow water. but if you want to catch the big fish, you’ve got to go deeper... down deep, the fish are more powerful and more pure. they’re huge and abstract. and they’re very beautiful.</h2>
+			<div class="container">
+				<h1 class="title">ideas are like fish</h1>
+				<h2 class="subtitle is-size-7-mobile">"if you want to catch little fish, you can stay in the shallow water. but if you want to catch the big fish, you’ve got to go deeper... down deep, the fish are more powerful and more pure. they’re huge and abstract. and they’re very beautiful." - David Lynch, filmmaker</h2>
 				<!--<div class="buttons">
 					<a class="button button-style is-rounded" href="https://www.jotform.com/230828014081044" target="_blank">Submit story</a>
 					<a class="button button-style is-rounded" href="https://continental-club-houston.square.site/" target="_blank">Get tickets</a>
@@ -142,36 +146,59 @@
 	
 	</section>
 	
-	<section class="hero is-info is-small" id="two">
+	<!--divider-->
+	<section class="hero has-background-info-dark" id="two">
 		
-		<div class="hero-body">
-			
-			<p class="subtitle"></p>
-			
-		</div>
+		<div class="hero-body"></div>
 		
 	</section>
 	
-	<section class="section">
+	<section class="section has-background-info">
 		<div class="tile is-ancestor">
-			<div class="tile is-vertical">
-				<div class="tile">
-					<div class="tile is-parent is-8">
-						<article class="tile is-child">
-							<figure class="image">
-								<img style="box-shadow: .25em .25em rgba(255, 255, 255, .35);" src="02.png">
-							</figure>
-						</article>
-					</div>
-					<div class="tile is-parent is-4">
-						<article class="tile is-child">
-							<p class="subtitle">
-								airalliancehouston.org<br>
-								wordpress / html / css / js / jq
+			<div class="tile is-parent is-7">
+				<article class="tile is-child">
+					<figure class="image">
+						<img src="02c.png" id="yoil">
+					</figure>
+				</article>
+			</div>
+			<div class="tile is-parent has-text-centered-mobile">
+				<div class="tile is-child">
+					<p class="title">
+						Air Alliance Houston
+					</p>
+					<p class="subtitle is-size-7-mobile">
+						Wordpress administration, configuration, customization, design mockup, and security for influential Harris County community non-profit. Major homepage refresh and global site updates to align with org rebrand (new primary, secondary, and tertiary color palette and patterns). Increased screen real-estate "above the fold"; streamlined site header/navbar; animated primary navbar CTA; added secondary hero CTA; streamlined footer.
+					</p>
+					<div class="columns is-mobile is-vcentered">
+						<div class="column is-narrow-tablet has-text-right">
+							<p class="subtitle is-size-7-mobile">
+								Before
 							</p>
-						</article>
+						</div>
+						<div class="column is-narrow-tablet">
+							<div class="field">
+								<input id="aahSwitch" type="checkbox" name="aahSwitch" class="switch is-rounded is-success is-large" checked="checked">
+								<label for="aahSwitch"></label>
+							</div>
+						</div>
+						<div class="column is-narrow-tablet has-text-left">
+							<p class="subtitle is-size-7-mobile">
+								After
+							</p>
+						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="tile is-ancestor">
+			<div class="tile is-parent is-3"></div>
+			<div class="tile is-parent is-6">
+				<article class="tile is-child">
+					<figure class="image">
+						<img src="05c.png" id="goil">
+					</figure>
+				</article>
 			</div>
 		</div>
 	</section>
@@ -179,6 +206,7 @@
 </body>
 
 <script>
+	// smooth scrolling javascript for non-Safari browsers
 	$(document).ready(function(){
 		
 		// Add smooth scrolling to all links
@@ -208,6 +236,21 @@
 		});
 	
 	});
+</script>
+<script>
+	//button image fade in/out toggle
+	$(document).ready(function(){
+	        $('#aahSwitch').click(function(){
+	            if($(this).is(":checked")){
+					$('#yoil').attr('src','02c.png');
+					$('#goil').attr('src','05c.png');
+	            }
+	            else if($(this).is(":not(:checked)")){
+	                $('#yoil').attr('src','02b.png');
+					$('#goil').attr('src','05b.png');
+	            }
+	        });
+	    });
 </script>
 
 </html>
